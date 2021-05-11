@@ -3,5 +3,6 @@
     <string name="testing">Test</string>
     <string name="welcome">Welcome</string>
     <string name="enter_your_name">Please enter your name</string>
-    <string name="hint">name</string>
+    <string name="hint">Name</string>
+    <string name="start">Start</string>
 </resources>
