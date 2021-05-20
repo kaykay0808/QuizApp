@@ -1,4 +1,4 @@
-package com.example.quizapp
+ package com.example.quizapp
 //in this section we created a class with questions (right click, -> new -> kotlin file class -> class chosen)
 
 // we added data before class and change out curve bracket to parantes

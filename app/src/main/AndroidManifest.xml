@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
+
+        <!-- Quiz Question Activity-->
         <activity
             android:name=".QuizQuestionActivity"
             android:screenOrientation="portrait">

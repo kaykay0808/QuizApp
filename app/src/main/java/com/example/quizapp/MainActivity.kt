@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity() {
             //if the textfield is empty, we want to inform the user about that.
             if (binding.etName.text.toString().isEmpty()) {
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
-                //if the text is not empty ↓
-            } else {
+
+            //if the text is not empty ↓
+            }else{
                 val intent = Intent(this, QuizQuestionActivity::class.java)
                 startActivity(intent)
                 //this will close the current activity ↓
