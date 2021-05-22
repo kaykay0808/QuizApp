@@ -1,10 +1,9 @@
 package com.example.quizapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.quizapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,15 +16,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnStart.setOnClickListener {
-            //if the textfield is empty, we want to inform the user about that.
+            // if the textfield is empty, we want to inform the user about that.
             if (binding.etName.text.toString().isEmpty()) {
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
 
-            //if the text is not empty ↓
-            }else{
+                // if the text is not empty ↓
+            } else {
                 val intent = Intent(this, QuizQuestionActivity::class.java)
                 startActivity(intent)
-                //this will close the current activity ↓
+                // this will close the current activity ↓
                 finish()
             }
         }

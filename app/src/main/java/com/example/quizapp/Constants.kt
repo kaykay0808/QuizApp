@@ -5,7 +5,7 @@ object Constants {
     fun getQuestions(): ArrayList<Question> {
         val questionsList = ArrayList<Question>()
 
-        //1
+        // 1
         val que1 = Question(
             1,
             "What country does this flag belong to?",
@@ -18,7 +18,7 @@ object Constants {
         )
         questionsList.add(que1)
 
-        //2
+        // 2
         val que2 = Question(
             2,
             "What country does this flag belong to?",
@@ -31,7 +31,7 @@ object Constants {
         )
         questionsList.add(que2)
 
-        //3
+        // 3
         val que3 = Question(
             3,
             "What country does this flag belong to?",
@@ -44,7 +44,7 @@ object Constants {
         )
         questionsList.add(que3)
 
-        //4
+        // 4
         val que4 = Question(
             4,
             "What country does this flag belong to?",
@@ -57,7 +57,7 @@ object Constants {
         )
         questionsList.add(que4)
 
-        //5
+        // 5
         val que5 = Question(
             5,
             "What country does this flag belong to?",
@@ -70,7 +70,7 @@ object Constants {
         )
         questionsList.add(que5)
 
-        //6
+        // 6
         val que6 = Question(
             6,
             "What country does this flag belong to?",
@@ -83,7 +83,7 @@ object Constants {
         )
         questionsList.add(que6)
 
-        //7
+        // 7
         val que7 = Question(
             7,
             "What country does this flag belong to?",
@@ -96,7 +96,7 @@ object Constants {
         )
         questionsList.add(que7)
 
-        //8
+        // 8
         val que8 = Question(
             8,
             "What country does this flag belong to?",
@@ -109,7 +109,7 @@ object Constants {
         )
         questionsList.add(que8)
 
-        //9
+        // 9
         val que9 = Question(
             9,
             "What country does this flag belong to?",
@@ -122,7 +122,7 @@ object Constants {
         )
         questionsList.add(que9)
 
-        //10
+        // 10
         val que10 = Question(
             10,
             "What country does this flag belong to?",
@@ -137,6 +137,4 @@ object Constants {
 
         return questionsList
     }
-
-
 }
