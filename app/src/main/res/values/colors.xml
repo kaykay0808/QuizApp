@@ -11,5 +11,5 @@
     <color name="option_text_color">#7A8089</color>
     <color name="color_Primary">#9013FE</color>
     <color name="color_PrimaryDark">#6A1B9A</color>
-    <color name="color_Accent">#03DAC5</color>
+    <color name="color_Accent">#9013FE</color>
 </resources>
