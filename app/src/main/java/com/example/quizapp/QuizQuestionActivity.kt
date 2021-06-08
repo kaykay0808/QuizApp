@@ -1,5 +1,6 @@
 package com.example.quizapp
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -21,6 +22,10 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
     // Step 5: A global variables for selected option.
     private var mSelectedOptionPosition: Int = 0
 
+    private var mCorrectAnswers: Int = 0
+
+    private var mUserName: String? = null
+
 
     private lateinit var binding: ActivityQuizQuestionBinding
 
@@ -29,6 +34,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityQuizQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
 
         mQuestionsList = Constants.getQuestions()
 
@@ -104,21 +110,18 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_submit -> {
 
                 if (mSelectedOptionPosition == 0) {
-
                     mCurrentPosition++
 
                     when {
-
                         mCurrentPosition <= mQuestionsList!!.size -> {
-
                             setQuestion()
                         }
                         else -> {
-                            Toast.makeText(
-                                this,
-                                "You have successfully completed the Quiz",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            val intent = Intent(this, ResultActivity::class.java)
+                            intent.putExtra(Constants.USER_NAME, mUserName)
+                            intent.putExtra(Constants.CORRECT_ANSWER, mCorrectAnswers)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                            startActivity(intent)
                         }
                     }
                 } else {
@@ -127,6 +130,8 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                     // This will check if the answer is wrong
                     if (question!!.correctAnswer != mSelectedOptionPosition) {
                         answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
+                    } else {
+                        mCorrectAnswers++
                     }
 
                     // this is for correct answer

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
                 // if the text is not empty ↓
             } else {
                 val intent = Intent(this, QuizQuestionActivity::class.java)
+                intent.putExtra(Constants.USER_NAME, binding.etName.text.toString())
                 startActivity(intent)
                 // this will close the current activity ↓
                 finish()
