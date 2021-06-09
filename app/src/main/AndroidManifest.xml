@@ -9,10 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
-        <activity
-            android:name=".ResultActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoActionBarTheme"></activity>
         <!-- (step 1) customizing: Orientation, and style with no actionBar -->
         <activity
             android:name=".MainActivity"
@@ -28,6 +24,11 @@
         <activity
             android:name=".QuizQuestionActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
     </application>
 
 </manifest>

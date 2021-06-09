@@ -3,6 +3,7 @@ package com.example.quizapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.quizapp.databinding.ActivityQuizQuestionBinding
 import com.example.quizapp.databinding.ActivityResultBinding
 
@@ -14,6 +15,7 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val username = intent.getStringExtra(Constants.USER_NAME)
         binding.tvName.text = username
